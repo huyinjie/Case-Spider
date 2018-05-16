@@ -1,6 +1,6 @@
 # coding:utf-8
 import getProductData
-import updateDatabase
+# import updateDatabase
 import getProductList
 
 Product_Sort_Dict = dict()
