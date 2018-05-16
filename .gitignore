@@ -2,5 +2,5 @@
 Jonsbo/test
 credential/
 venv/
-Jonsbo/updateDatabase.py
+Jonsbo/updateRemoteDatabase.py
 Jonsbo/GoogleSheetAPI.py
