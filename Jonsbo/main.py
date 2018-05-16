@@ -14,5 +14,5 @@ Product_Sort_Dict = getProductList.getNameUrlPair(Product_Sort_Dict)
 Product_List = getProductList.getNameUrlColorPair(Product_Sort_Dict, Product_List)
 Parameter_List = getProductData.main(Product_List, Parameter_List)
 print("Successfully!")
-updateDatabase.main(Parameter_List)
+# updateDatabase.main(Parameter_List)
 
