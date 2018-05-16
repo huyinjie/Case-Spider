@@ -1,0 +1,6 @@
+.idea
+Jonsbo/test
+credential/
+venv/
+Jonsbo/updateDatabase.py
+Jonsbo/GoogleSheetAPI.py
