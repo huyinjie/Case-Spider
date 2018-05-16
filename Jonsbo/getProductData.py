@@ -32,6 +32,7 @@ def deldict(tempdict):
     if '面板材质' in tempdict:
         del tempdict['面板材质']
 
+
 # main code
 def main(pairlist, dataList):
     for x in range(len(pairlist)):
