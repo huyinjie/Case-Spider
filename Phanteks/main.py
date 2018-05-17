@@ -1,10 +1,11 @@
-from . import getProductList
+from Phanteks.getProductList import getUrlNamePair
+from Phanteks.getProductList import getUrlList
 
 
 Product_List = []
 Product_dict = dict()
 
-getProductList.getUrlList(Product_List)
-getProductList.getUrlNamePair(Product_List, Product_dict)
+getUrlList(Product_List)
+getUrlNamePair(Product_List, Product_dict)
 print(Product_dict)
 
