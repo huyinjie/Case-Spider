@@ -1,6 +1,6 @@
 # coding:utf-8
-from .getProductList import getUrlList
-from .getProductList import getUrlNamePair
+from getProductList import getUrlList
+from getProductList import getUrlNamePair
 
 
 Product_List = []
