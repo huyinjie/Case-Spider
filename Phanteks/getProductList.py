@@ -44,10 +44,10 @@ def getUrlNamePair(templist, tempdict):
 
 
 # Run Test
-# if __name__ == '__main__':
-#     Product_List = []
-#     Product_dict = dict()
-#     getUrlList(Product_List)
-#     getUrlNamePair(Product_List, Product_dict)
-#     print(Product_dict)
+if __name__ == '__main__':
+    Product_List = []
+    Product_dict = dict()
+    getUrlList(Product_List)
+    getUrlNamePair(Product_List, Product_dict)
+    print(Product_dict)
 
