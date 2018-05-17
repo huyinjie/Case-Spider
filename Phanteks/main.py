@@ -1,4 +1,4 @@
-import getProductList
+from . import getProductList
 
 
 Product_List = []
