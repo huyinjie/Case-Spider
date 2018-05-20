@@ -51,4 +51,5 @@ if __name__ == '__main__':
     getUrlNamePair(Product_List, Product_dict)
     for item in Product_dict.items():
         print(item)
+    print(len(Product_dict))
     # print(Product_List)
