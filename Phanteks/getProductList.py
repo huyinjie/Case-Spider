@@ -49,5 +49,6 @@ if __name__ == '__main__':
     Product_dict = dict()
     getUrlList(Product_List)
     getUrlNamePair(Product_List, Product_dict)
-    print(Product_dict)
-
+    for item in Product_dict.items():
+        print(item)
+    # print(Product_List)
