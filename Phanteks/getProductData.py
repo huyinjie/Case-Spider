@@ -2,6 +2,8 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import json
+
 
 # Global variables
 headers = {
@@ -41,25 +43,19 @@ def main(pairdict, dataList):
         tempdict.update({'Product name': k})
         for tr in soup:
             try:
-                tr.td.div.get_text().strip()
-            except:
-                pass
-            else:
                 firsttd_text = tr.td.div.get_text().strip()
-
-            try:
-                tr.find_all("td")[1].div.get_text().strip()
             except:
                 pass
-            else:
+
+            try:
                 secondtd_text = tr.find_all("td")[1].div.get_text().strip()
+            except:
+                pass
 
             try:
                 tempdict.update(AttributesAnalysis(firsttd_text, secondtd_text))
             except:
                 pass
-            else:
-                tempdict.update(AttributesAnalysis(firsttd_text, secondtd_text))
 
         dataList.append(tempdict)
         # print(tempdict)
@@ -77,3 +73,6 @@ if __name__ == '__main__':
     Product_Data = []
     main(test2, Product_Data)
     print(Product_Data)
+    json_str = json.dumps(Product_Data)
+    with open('data.json', 'w') as outfile:
+        json.dump(json_str, outfile)
