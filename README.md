@@ -7,5 +7,5 @@ Build Status : [![Build Status](https://travis-ci.org/huyinjie/Case-Spider.svg?b
 
 |     Brand    | Site                         | Case | 
 |     :--:     | :--                          | :-----: | 
-|  **Jonsbo**  | <http://www.jonsbo.com/>     |✓|
+|  **Jonsbo**  | <http://www.jonsbo.com/>     |Pending|
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
