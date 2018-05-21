@@ -15,12 +15,12 @@ headers = {
 # define a case-like function
 def AttributesAnalysis(attribute, data):
     if attribute == 'Dimension':
-        m = re.compile(u"^(\d+ mm) x (\d+ mm) x (\d+ mm)").search(data)
-        return {'Width': m.group(1), 'Height': m.group(2), 'Depth': m.group(3)}
+        m = re.compile(u"^(\d+)\s?mm x (\d+)\s?mm x (\d+)\s?mm").search(data)
+        return {'Width': int(m.group(1)), 'Height': int(m.group(2)), 'Depth': int(m.group(3))}
     elif attribute == 'Form Factor':
         return {'Form Factor': data}
-    elif attribute == 'Material(s)':
-        return {'Material': data}
+    elif attribute == 'Material(s)'or 'Materials':
+        return {'Material': data.replace('\n', '')}
     elif attribute == 'Motherboard Support':
         return {'Motherboard Support': data}
     elif attribute == 'Front I/O':
@@ -72,7 +72,10 @@ if __name__ == '__main__':
 
     Product_Data = []
     main(test2, Product_Data)
-    print(Product_Data)
-    json_str = json.dumps(Product_Data)
-    with open('data.json', 'w') as outfile:
-        json.dump(json_str, outfile)
+    # print(Product_Data)
+    json_str = json.dumps(Product_Data, indent=4)
+    # json_str = json.dumps(Product_Data, indent=4, sort_keys=True)
+    print(json_str)
+    # with open('data.txt', 'w') as outfile:
+    #     json.dump(json_str, outfile)
+
