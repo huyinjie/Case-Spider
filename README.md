@@ -7,6 +7,10 @@
 ## Introduction
 generally get the specification of the  following parameter and save as a json file for each brand.
 
+<li>DIMENSIONS (H x W x D)</li>
+
+<li>VOLUME & WEIGHT</li>
+
 - DIMENSIONS (H x W x D)
 
 - VOLUME & WEIGHT
