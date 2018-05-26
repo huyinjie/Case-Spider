@@ -59,11 +59,21 @@ def AttributesAnalysis(attribute, data):
             return {'Width': int(m4.group(1)), 'Height': int(m4.group(2)), 'Depth': int(m4.group(3))}
         else:
             return -1
+
     # 获取 Material
     elif attribute == 'Material(s)':
         return {'Material': data.replace('\n', '')}
-    elif attribute == 'Clearance':
-        return {'Material': data.replace('\n', '')}
+    # elif attribute == 'Clearance':
+        # match = re.compile(u"")
+        # m = match.search(data)
+        # if m is not None:
+        #     return {'Material': data}
+        # if "ABS" in data:
+        #     return {'Material': data}
+        # elif "SECC" in data:
+        #     return {'Material': data}
+        # else:
+        #     return -1
     # 获取 Motherboard Support
     elif attribute == 'Motherboard Support':
         return {'Motherboard Support': data.replace('\n', '')}
@@ -77,7 +87,10 @@ def AttributesAnalysis(attribute, data):
         return {'Weight': float(data.strip(' kg'))}
     # 获取 Drive Bays
     elif attribute == 'Drive Bays':
-        return {'Drive Bays	': data.replace('\n', '')}
+        # data = data.replace('r"\u201d"', '"')
+        # data = data.replace("”", '"')
+        # data = data.replace('\\', '')
+        return {'Drive Bays': data}
     else:
         return -1
 
@@ -93,10 +106,10 @@ def main(pairdict, dataList):
         tempdict = {}
         tempdict.update({'Product name': k})
         for tr in soup:
-            # Test
             firsttd_text = tr.td.get_text().strip()
             secondtd_text = tr.find_all("td")[1]
             secondtd_text = ", ".join(secondtd_text.strings)
+            # Test
             # print(firsttd_text, "  ", secondtd_text)
             # print(tr)
             if AttributesAnalysis(firsttd_text, secondtd_text) is not -1:
@@ -110,7 +123,7 @@ def main(pairdict, dataList):
 if __name__ == '__main__':
     # Product_dict = {'Enthoo Elite': 'http://www.phanteks.com/Enthoo-Elite.html'}
     # Product_List = ['http://www.phanteks.com/Enthoo-Elite.html']
-    test = {'H700': 'https://www.nzxt.com/products/h700-matte-white'}
+    test1 = {'H700': 'https://www.nzxt.com/products/h700-matte-white'}
     test2 = {'H700': 'https://www.nzxt.com/products/h700-matte-white', 'H500': 'https://www.nzxt.com/products/h500-matte-white', 'H400': 'https://www.nzxt.com/products/h400-matte-white', 'H200': 'https://www.nzxt.com/products/h200-matte-white', 'H700i': 'https://www.nzxt.com/products/h700i-matte-white', 'H500i': 'https://www.nzxt.com/products/h500i-matte-white', 'H400i': 'https://www.nzxt.com/products/h400i-matte-white', 'H200i': 'https://www.nzxt.com/products/h200i-matte-white', 'H700i Ninja': 'https://www.nzxt.com/products/h700i-ninja', 'H700 PUBG': 'https://www.nzxt.com/products/h700-pubg-limited-edition', 'S340 Elite': 'https://www.nzxt.com/products/s340-elite-matte-white', 'S340': 'https://www.nzxt.com/products/s340-white', 'H440': 'https://www.nzxt.com/products/h440-white', 'Manta': 'https://www.nzxt.com/products/manta-matte-white-black', 'Noctis 450': 'https://www.nzxt.com/products/noctis-450-white-blue', 'Source 530': 'https://www.nzxt.com/products/source-530', 'Phantom 410': 'https://www.nzxt.com/products/phantom-410-white', 'Phantom': 'https://www.nzxt.com/products/phantom-white', 'Phantom 530': 'https://www.nzxt.com/products/phantom-530', 'H440 Hyper Beast': 'https://www.nzxt.com/products/h440-hyper-beast', 'S340 Elite Hyper Beast': 'https://www.nzxt.com/products/s340-elite-hyper-beast', 'H440 - Designed by Razer™': 'https://www.nzxt.com/products/h440-designed-by-razer', 'S340 - Designed by Razer™': 'https://www.nzxt.com/products/s340-designed-by-razer', 'S340 Elite Limited Purple Edition': 'https://www.nzxt.com/products/s340-elite-limited-purple-edition', 'Noctis 450 ROG': 'https://www.nzxt.com/products/noctis-450-rog'}
 
     Product_Data = []
@@ -118,10 +131,17 @@ if __name__ == '__main__':
     print(Product_Data)
 
     # Write Json
-    json_str = json.dumps(Product_Data, indent=4)
-    with open('nzxt.json', 'w') as outfile:
-        outfile.write(json_str)
-    print(json_str)
 
+    # json_str = json.dumps(Product_Data, indent=4)
+    # with open('nzxt.json', 'w') as outfile:
+    #     outfile.write(json_str)
+    # print(json_str)
+
+    # json_str = json.dumps(Product_Data, indent=4, ensure_ascii=False).encode('utf8')
+    with open('nzxt.json', 'w', encoding='utf8') as json_file:
+        data = json.dumps(Product_Data, ensure_ascii=False, indent=4)
+        # unicode(data) auto-decodes data to unicode if str
+        json_file.write(str(data))
+        print(json_file)
 
 
