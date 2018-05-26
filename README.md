@@ -8,18 +8,11 @@
 generally get the specification of the  following parameter and save as a json file for each brand.
 
 <ul>
-  <li>DIMENSIONS (H x W x D)</li>
-  <li>VOLUME & WEIGHT</li>
-  <li>GPU</li>
-  <li>MOTHERBOARD</li>
-  <li>POWER SUPPLY</li>
-  <li>CPU HEATSINK</li>
-  <li>WATER COOLING</li>
-  <li>STORAGE</li>
-  <li>MATERIAL</li>
-  <li>COLORS</li>
-  <li>PCI RISER</li>
-  <li>TOPHATS (ACCESSORY)</li>
+  <li>Dimensions (H x W x D)</li>
+  <li>Weight</li>
+  <li>Material</li>
+  <li>Front I/O</li>
+  <li>Motherboard Support</li>
 </ul>
 
 ## Supported Brand
@@ -28,3 +21,4 @@ generally get the specification of the  following parameter and save as a json f
 |     :--:     | :--                          | :-----: |
 |  **Jonsbo**  | <http://www.jonsbo.com/>     |Pending|
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
+|   **NZXT**   | <https://www.nzxt.com/>      |✓|
