@@ -25,6 +25,6 @@ generally get the specification of the  following parameter and save as a json f
 ## Supported Brand
 
 |     Brand    | Site                         | Case |
-|     :--:     | :-<li>                         | :-----: |
+|     :--:     | :--                          | :-----: |
 |  **Jonsbo**  | <http://www.jonsbo.com/>     |Pending|
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
