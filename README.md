@@ -7,28 +7,23 @@
 ## Introduction
 generally get the specification of the  following parameter and save as a json file for each brand.
 
-<li>DIMENSIONS (H x W x D)</li>
-
-<li>VOLUME & WEIGHT</li>
-
-- DIMENSIONS (H x W x D)
-
-- VOLUME & WEIGHT
-- GPU
-- MOTHERBOARD
-- POWER SUPPLY
-- CPU HEATSINK
-- WATER COOLING
-- STORAGE
-- MATERIAL
-- COLORS
-- PCI RISER
-- TOPHATS (ACCESSORY)
+<ul>DIMENSIONS (H x W x D)</ul>
+<ul>VOLUME & WEIGHT</ul>
+<ul>GPU</ul>
+<ul>MOTHERBOARD</ul>
+<ul>POWER SUPPLY</ul>
+<ul>CPU HEATSINK</ul>
+<ul>WATER COOLING</ul>
+<ul>STORAGE</ul>
+<ul>MATERIAL</ul>
+<ul>COLORS</ul>
+<ul>PCI RISER</ul>
+<ul>TOPHATS (ACCESSORY)</ul>
 
 
 ## Supported Brand
 
 |     Brand    | Site                         | Case |
-|     :--:     | :--                          | :-----: |
+|     :--:     | :-<ul>                         | :-----: |
 |  **Jonsbo**  | <http://www.jonsbo.com/>     |Pending|
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
