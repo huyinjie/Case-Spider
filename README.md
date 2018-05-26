@@ -5,12 +5,26 @@
 </p>
 
 ## Introduction
-Build Status : [![Build Status](https://travis-ci.org/huyinjie/Case-Spider.svg?branch=master)](https://travis-ci.org/huyinjie/Case-Spider)
+generally get the specification of the  following parameter and save as a json file for each brand.
+
+- DIMENSIONS (H x W x D)
+
+- VOLUME & WEIGHT
+- GPU
+- MOTHERBOARD
+- POWER SUPPLY
+- CPU HEATSINK
+- WATER COOLING
+- STORAGE
+- MATERIAL
+- COLORS
+- PCI RISER
+- TOPHATS (ACCESSORY)
 
 
 ## Supported Brand
 
-|     Brand    | Site                         | Case | 
-|     :--:     | :--                          | :-----: | 
+|     Brand    | Site                         | Case |
+|     :--:     | :--                          | :-----: |
 |  **Jonsbo**  | <http://www.jonsbo.com/>     |Pending|
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
