@@ -35,6 +35,7 @@ headers = {
 # My definition
 # define a case-like function
 def AttributesAnalysis(attribute, data):
+    # 获取 Dimensions (H x W x D)
     if attribute == 'Dimensions':
         # 匹配 W: 230mm H: 494mm D: 494mm (without feet)
         match1 = re.compile(u"^W: (\d+)\s?mm\s?H: (\d+)\s?mm\s?D: (\d+)\s?mm\s?")
@@ -58,22 +59,25 @@ def AttributesAnalysis(attribute, data):
             return {'Width': int(m4.group(1)), 'Height': int(m4.group(2)), 'Depth': int(m4.group(3))}
         else:
             return -1
-    elif attribute == 'Form Factor':
-        return {'Form Factor': data}
+    # 获取 Material
     elif attribute == 'Material(s)':
         return {'Material': data.replace('\n', '')}
     elif attribute == 'Clearance':
         return {'Material': data.replace('\n', '')}
+    # 获取 Motherboard Support
     elif attribute == 'Motherboard Support':
         return {'Motherboard Support': data.replace('\n', '')}
+    # 获取 Front I/O
     elif attribute == 'I/O Ports':
-        return {'I/O Ports': data.replace('\n', ',')}
+        return {'Front I/O': data.replace('\n', ',')}
+    # 获取 Weight
     elif attribute == 'Weight':
         return {'Weight': float(data.strip(' kg'))}
     elif attribute == 'Product Weight':
         return {'Weight': float(data.strip(' kg'))}
-    # elif attribute == 'Side Window':
-    #     return {'Side Window': data.replace('\n', '')}
+    # 获取 Drive Bays
+    elif attribute == 'Drive Bays':
+        return {'Drive Bays	': data.replace('\n', '')}
     else:
         return -1
 
