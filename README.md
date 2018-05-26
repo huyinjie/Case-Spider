@@ -1,6 +1,4 @@
-# README
 <h1 align="center">Case-Spider</h1>
-
 <p align="center">A collection of popular cases.</p>
 
 ## Introduction
