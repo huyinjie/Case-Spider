@@ -29,6 +29,8 @@ def AttributesAnalysis(attribute, data):
         return {'I/O Ports': data.replace('\n', '')}
     elif attribute == 'Side Window':
         return {'Side Window': data.replace('\n', '')}
+    else:
+        return -1
 
 
 # main code
@@ -54,12 +56,10 @@ def main(pairdict, dataList):
             except:
                 pass
 
-            try:
+            if AttributesAnalysis(firsttd_text, secondtd_text) is not -1:
                 tempdict.update(AttributesAnalysis(firsttd_text, secondtd_text))
-            except:
-                pass
-
         dataList.append(tempdict)
+
         # print(tempdict)
         # print('')
     return dataList

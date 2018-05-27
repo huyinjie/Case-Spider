@@ -74,6 +74,7 @@ def AttributesAnalysis(attribute, data):
         #     return {'Material': data}
         # else:
         #     return -1
+
     # 获取 Motherboard Support
     elif attribute == 'Motherboard Support':
         return {'Motherboard Support': data.replace('\n', '')}

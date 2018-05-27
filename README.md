@@ -13,6 +13,7 @@ generally get the specification of the  following parameter and save as a json f
   <li>Material</li>
   <li>Front I/O</li>
   <li>Motherboard Support</li>
+  <li>Drive Bays</li>
 </ul>
 
 ## Supported Brand
