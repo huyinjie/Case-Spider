@@ -23,3 +23,13 @@ Get the specification of the  following parameter and save as a json file for ea
 |  **Jonsbo**  | <http://www.jonsbo.com/>     |Pending|
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
 |   **NZXT**   | <https://www.nzxt.com/>      |✓|
+
+<detail>
+
+|   Brand  |           Site           |  Status | Dimensions | Weight | Material | Front I/O | Motherboard Support | Drive Bays |
+|:--------:|:------------------------:|:-------:|:----------:|:------:|:--------:|:---------:|:-------------------:|:----------:|
+|  Jonsbo  |  http://www.jonsbo.com/  | Pending |            |        |          |           |                     |            |
+| Phanteks | http://www.phanteks.com/ |    ✓    |      ✓     |    ✓   |     ✓    |     ✓     |          ✓          |      ✓     |
+|   NZXT   |   https://www.nzxt.com/  |    ✓    |      ✓     |        |     ✓    |     ✓     |          ✓          |            |
+
+</detail>
