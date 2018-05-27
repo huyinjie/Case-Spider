@@ -17,8 +17,8 @@ def AttributesAnalysis(attribute, data):
     if attribute == 'Dimension':
         m = re.compile(u"^(\d+)\s?mm x (\d+)\s?mm x (\d+)\s?mm").search(data)
         return {'Width': int(m.group(1)), 'Height': int(m.group(2)), 'Depth': int(m.group(3))}
-    elif attribute == 'Form Factor':
-        return {'Form Factor': data}
+    # elif attribute == 'Form Factor':
+    #     return {'Form Factor': data}
     elif attribute == 'Material(s)':
         return {'Material': data.replace('\n', '')}
     elif attribute == 'Materials':
@@ -26,9 +26,9 @@ def AttributesAnalysis(attribute, data):
     elif attribute == 'Motherboard Support':
         return {'Motherboard Support': data.replace('\n', '')}
     elif attribute == 'Front I/O':
-        return {'I/O Ports': data.replace('\n', '')}
-    elif attribute == 'Side Window':
-        return {'Side Window': data.replace('\n', '')}
+        return {'Front I/O': data.replace('\n', '')}
+    # elif attribute == 'Side Window':
+    #     return {'Side Window': data.replace('\n', '')}
     else:
         return -1
 
