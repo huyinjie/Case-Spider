@@ -5,7 +5,7 @@
 </p>
 
 ## Introduction
-generally get the specification of the  following parameter and save as a json file for each brand.
+Get the specification of the  following parameter and save as a json file for each brand.
 
 <ul>
   <li>Dimensions (H x W x D)</li>
