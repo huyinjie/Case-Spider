@@ -24,10 +24,57 @@ Get the specification of the  following parameter and save as a json file for ea
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
 |   **NZXT**   | <https://www.nzxt.com/>      |✓|
 
-#### Detail
+<detail>
+  <summary>Show Detail</summary>
+  <table>
+    <thead>
+    <tr>
+    <th style="text-align:center">Brand</th>
+    <th style="text-align:center">Site</th>
+    <th style="text-align:center">Status</th>
+    <th style="text-align:center">Dimensions</th>
+    <th style="text-align:center">Weight</th>
+    <th style="text-align:center">Material</th>
+    <th style="text-align:center">Front I/O</th>
+    <th style="text-align:center">Motherboard Support</th>
+    <th style="text-align:center">Drive Bays</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td style="text-align:center">Jonsbo</td>
+    <td style="text-align:center"><a href="http://www.jonsbo.com/">http://www.jonsbo.com/</a></td>
+    <td style="text-align:center">Pending</td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center"></td>
+    </tr>
+    <tr>
+    <td style="text-align:center">Phanteks</td>
+    <td style="text-align:center"><a href="http://www.phanteks.com/">http://www.phanteks.com/</a></td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    </tr>
+    <tr>
+    <td style="text-align:center">NZXT</td>
+    <td style="text-align:center"><a href="https://www.nzxt.com/">https://www.nzxt.com/</a></td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center"></td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center">✓</td>
+    <td style="text-align:center"></td>
+    </tr>
+    </tbody>
+  </table>
+</detail>
 
-|   Brand  |           Site           |  Status | Dimensions | Weight | Material | Front I/O | Motherboard Support | Drive Bays |
-|:--------:|:------------------------:|:-------:|:----------:|:------:|:--------:|:---------:|:-------------------:|:----------:|
-|  Jonsbo  |  http://www.jonsbo.com/  | Pending |            |        |          |           |                     |            |
-| Phanteks | http://www.phanteks.com/ |    ✓    |      ✓     |    ✓   |     ✓    |     ✓     |          ✓          |      ✓     |
-|   NZXT   |   https://www.nzxt.com/  |    ✓    |      ✓     |        |     ✓    |     ✓     |          ✓          |            |
