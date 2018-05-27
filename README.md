@@ -24,7 +24,7 @@ Get the specification of the  following parameter and save as a json file for ea
 | **Phanteks** | <http://www.phanteks.com/>   |✓|
 |   **NZXT**   | <https://www.nzxt.com/>      |✓|
 
-<detail>
+<details>
   <summary>Show Detail</summary>
   <table>
     <thead>
@@ -76,5 +76,5 @@ Get the specification of the  following parameter and save as a json file for ea
     </tr>
     </tbody>
   </table>
-</detail>
+</details>
 
