@@ -5,3 +5,4 @@ venv/
 Jonsbo/updateRemoteDatabase.py
 Jonsbo/GoogleSheetAPI.py
 translate_test.py
+*.pyc
