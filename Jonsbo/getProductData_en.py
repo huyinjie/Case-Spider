@@ -7,6 +7,13 @@ import re
 
 
 # My definition
+def haveChinese(word):
+    zh_pattern = re.compile(u'[\u4e00-\u9fa5]+')
+    match = zh_pattern.search(word)
+
+    return match
+
+
 def mySplit(string):
     former_array = ''
     latter_array = ''
@@ -56,14 +63,23 @@ def AttributesAnalysis(tempdict):
             return {'Depth': int(m5.group(1)), 'Height': int(m5.group(2)), 'Width': int(m5.group(3))}
         else:
             return -1
+    # G3 有问题
     if key == "五金材质" or key == "a fs fsdf":
+        value = translate.ChineseToEnglish(value)
         return {"Material": value}
     if key == "主板支持类型":
+        value = value.replace("以内", " Maximum")
+        value = value.replace("内", " Maximum")
         return {"Motherboard Support": value}
     # C2有问题
     if key == "驱动器位":
+        if haveChinese(value) is not None:
+            pass
+            value = translate.ChineseToEnglish(value)
         return {"Drive Bays": value}
-    elif key == "前置接口	":
+    if key == "前置接口":
+        value = value.replace("麦克风", "Mic")
+        value = value.replace("耳机", " Headphone")
         return {"Front I/O": value}
     # elif key == "重量":
         # return {"": float(value.split('：')[1].strip('KG '))}

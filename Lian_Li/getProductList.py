@@ -1,10 +1,15 @@
 # coding:utf-8
 import requests
 from bs4 import BeautifulSoup
+import re
+
 
 # Global variables
+serial_list = ["http://www.lian-li.com/small/",
+               "http://www.lian-li.com/medium/",
+               "http://www.lian-li.com/large/"]
 headers = {
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36'
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
 }
 
 
@@ -16,21 +21,35 @@ def addPrefix(string):
 
 
 # Main Code
-def getUrlList(templist):
-    url = "http://www.phanteks.com/"
+def getUrlList(templist, url):
     r = requests.get(url, headers=headers)
     r.encoding = 'utf-8'
     soup = BeautifulSoup(r.text, "lxml")
-    # soup = soup.find("li", {"class": "megamenu-content"})
-    soup = soup.find_all("ul", {"class": "col-lg-2 col-sm-2 col-md-2 unstyled noMarginLeft"})
-    for x in soup:
-        y = x.find_all("li", id=True)
-        for z in y:
-            z = z.find_all("a")
-            for link in z:
-                link.get('href')
-                templist.append(addPrefix(link.get('href')))
-    return templist
+    soup = soup.find("div", {"class": "mkd-full-width-inner"})
+    print(soup)
+    # soup = soup.fina_all("a", href=re.compile("^http://www.lian-li.com/"))
+    print(soup)
+    # for x in soup:
+    #     link = x.div.div.div.figure.a.get('href')
+    #     link = link.strip(' /')
+    #     print(link)
+
+# def getUrlList(templist, url):
+#     r = requests.get(url, headers=headers)
+#     r.encoding = 'utf-8'
+#     soup = BeautifulSoup(r.text, "lxml")
+#     soup = soup.find_all("div", {"class": "wpb_column vc_column_container vc_col-sm-3"})
+#     for x in soup:
+#         link = x.div.div.div.figure.a.get('href')
+#         link = link.strip(' /')
+#         print(link)
+        # y = x.find_all("li", id=True)
+    #     for z in y:
+    #         z = z.find_all("a")
+    #         for link in z:
+    #             link.get('href')
+    #             templist.append(addPrefix(link.get('href')))
+    # return templist
 
 
 def getUrlNamePair(templist, tempdict):
@@ -47,9 +66,11 @@ def getUrlNamePair(templist, tempdict):
 if __name__ == '__main__':
     Product_List = []
     Product_dict = dict()
-    getUrlList(Product_List)
-    getUrlNamePair(Product_List, Product_dict)
-    for item in Product_dict.items():
-        print(item)
-    print(len(Product_dict))
-    # print(Product_List)
+    # for urls in serial_list:
+    #     getUrlList(Product_List, urls)
+    getUrlList(Product_List, serial_list[0])
+    # getUrlNamePair(Product_List, Product_dict)
+    # for item in Product_dict.items():
+    #     print(item)
+    # print(len(Product_dict))
+    # # print(Product_List)
