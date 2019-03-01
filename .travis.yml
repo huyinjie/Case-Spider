@@ -10,8 +10,8 @@ install: pip install -r requirements.txt
 #  - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 
 script:
- - python3 Phanteks/getProductData.py
- - python3 NZXT/getProductData.py
+ - python3 Phanteks/getProductData_cn.py
+ - python3 NZXT/getProductData_cn.py
 
 #services:
 #  - MongoDB
